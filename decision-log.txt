@@ -1,0 +1,11 @@
+Decision log: Austin shelter returns (example; keep yours as a plain text file outside the chat)
+
+Start: 173,775 rows, 12 columns (historical Austin Animal Center Outcomes, Oct 2013 to May 2025)
+1. One row = one outcome, not one animal (173,775 rows, 156,237 different animal IDs)
+2. Name blank in 49,784 rows: left alone (the question doesn't use names)
+3. Removed 46 rows with no outcome -> 173,729
+4. Kept dogs and cats only (Other, Bird, Livestock set aside) -> 163,865
+5. "Went home" = Return to Owner + Rto-Adopt (follows the City's recent "RTO/RTO Adopt" reporting; Rto-Adopt isn't defined anywhere I could find)
+6. Year = first four characters of DateTime
+7. Full years only, 2014 to 2024 (2013 and 2025 are partial) -> 156,201
+Check: 2024 dogs in a spreadsheet, 782 out of 5,233 rows, about 15%
