@@ -4,7 +4,9 @@
 
 **Answer.** Under our rule, where Return to Owner and Rto-Adopt both count as going home, the share of dogs leaving the Austin Animal Center that went home fell from 27.9% in 2014 to about 15% in 2024, nearly half. For cats the share stayed far below dogs: 4.9% in 2014 and 2.9% in 2024. Across 2014 to 2024 the dog share is about 25% (22,728 of 90,003 rows) and the cat share 4.5%, so the period you pick moves the dog answer by about ten points.
 
-![The share of dogs leaving the shelter that went home fell from about 28% in 2014 to about 15% in 2024](dogs_went_home.png)## Recommendations
+![The share of dogs leaving the shelter that went home fell from about 28% in 2014 to about 15% in 2024](dogs_went_home.png)
+
+## Recommendations
 1. **Raise the fall at the planning meeting.** The share of dogs leaving that went home was 23.3% in 2020, 16.7% in 2022 and about 15% in 2024. It falls whichever way Rto-Adopt is counted. Quote the recent years, not the 2014 to 2024 average of about 25%, which hides about ten points of the fall.
 2. **Ask a question about cats, not a claim.** Their share was 2.9% in 2024. This file cannot say why it is low. Question for the meeting: how do lost cats usually get home, if it is not through the shelter?
 3. **Ask the shelter for the Intakes file** (https://data.austintexas.gov/d/wter-evkm). The share I measured counts animals their owners surrendered as well as strays, so it cannot tell the two apart. The Intakes file records how animals came into the shelter, about the same size (around 174,000 rows) and also labelled public domain, so getting it next is how you start to separate the strays from the surrenders.
@@ -19,7 +21,9 @@
 
 **Result.** [PLACEHOLDER, write your own: what you found, with counts and the period. Whatever comes back goes in, even if it is small or not what you predicted.]
 
-**One limit.** [PLACEHOLDER, write your own: what this result can't tell you.]## How I got the numbers
+**One limit.** [PLACEHOLDER, write your own: what this result can't tell you.]
+
+## How I got the numbers
 Cleaning decisions (from decision-log.txt):
 1. 173,775 rows and 156,237 different animal IDs, so one row is one outcome, not one animal.
 2. Names left alone (49,784 blank, 28.6%); the question does not use them.
@@ -33,7 +37,9 @@ Cleaning decisions (from decision-log.txt):
 Counting per animal instead of per row barely moves it: dogs 25.4% (25.3% by row), cats 4.6% (4.5% by row). Counting only Return to Owner: dogs 24.0% across all years and 12.9% in 2024 (27.9% in 2014 either way), against 25.1% and about 15% with Rto-Adopt counted.
 
 Cross-check:
-- **Spreadsheet:** filtering the raw file to Dog, Return to Owner or Rto-Adopt, 2024 gives 782 rows out of 5,233 dog rows, about 15%.## Rerun it
+- **Spreadsheet:** filtering the raw file to Dog, Return to Owner or Rto-Adopt, 2024 gives 782 rows out of 5,233 dog rows, about 15%.
+
+## Rerun it
 1. Data: Austin Animal Center Outcomes (the historical file, October 2013 to May 2025), City of Austin Open Data Portal: https://data.austintexas.gov/d/9t4d-g238. The portal labels it public domain and asks for credit to the City of Austin and the department that publishes it (Austin Animal Center). That is the publisher's statement, not legal advice. [confirm exact wording on the dataset page] Do not use the newer dataset with the same name (it starts May 2025).
 2. On the dataset page, click Export, then CSV. Rename the download to `austin_outcomes.csv`.
 3. Put it in the same folder as `analysis.py` and run `python analysis.py` (needs Python with pandas and matplotlib; in Google Colab: upload both files, then run `!python analysis.py`).
